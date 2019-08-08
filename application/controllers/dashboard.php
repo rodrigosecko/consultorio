@@ -36,10 +36,10 @@ class Dashboard extends CI_Controller
     public function graficos()
     {
         if ($this->session->userdata("login")) {     
-            $data['conteo_dep'] = $this->depreciaciones_model->get_rest_count(1461);
-            $data['conteo_pers'] = $this->dashboard_model->get_count_pers(); 
-            $data['conteo_asign'] = $this->dashboard_model->get_count_asign(); 
-            $data['conteo_act'] = $this->dashboard_model->get_count_act(); 
+            $data['conteo_dep'] = 1;
+            $data['conteo_pers'] = 2; 
+            $data['conteo_asign'] = 3; 
+            $data['conteo_act'] = 4; 
 
             $this->load->view('dashboard/header');
             $this->load->view('admin/menu');

@@ -34,65 +34,42 @@
                
 
                 <li>
-                    <a class="has-arrow " href="#" aria-expanded="false"><i class="fas fa-barcode"></i><span class="hide-menu">Activos</span></a>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="fas fa-barcode"></i><span class="hide-menu">Pacientes</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="<?php echo base_url(); ?>activos/nuevo"><i class=" fas fa-book"></i> Altas</a></li>
-                        <li><a href="<?php echo base_url(); ?>activos/bajas"><i class="fas fa-clipboard-list"></i> Listado de Bajas</a></li>                        
-                        <li><a href="<?php echo base_url(); ?>Grupos/nuevo"><i class="fas fa-pencil-alt"></i> Grupos</a></li>
-                        <li><a href="<?php echo base_url(); ?>Auxiliar/nuevo"><i class="fas fa-pencil-alt"></i> Auxiliar</a></li>
-                         <li><a href="<?php echo base_url(); ?>activos/anio" target="blank"><i class="fas fa-clipboard-list"></i> Listado por anio</a></li>
+                        <li><a href="<?php echo base_url(); ?>pacientes/nuevo"><i class=" fas fa-book"></i> Registro</a></li>                
 
                     </ul> 
                 </li>
+             
                 <li>
-                    <a class="has-arrow " href="#" aria-expanded="false"><i class="fas fa-angle-double-right"></i><span class="hide-menu">Asignacion de activos</span></a>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="fas fa-angle-double-left"></i><span class="hide-menu">Doctores</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="<?php echo base_url(); ?>Asignacion/nuevo"><i class=" fas fa-book"></i> Asignar</a></li>
+                        <li><a href="<?php echo base_url(); ?>Devolucion/nuevo"><i class=" fas fa-book"></i>Registro</a></li>
+                        
+                    </ul> 
+                </li>
+
+                   <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="fas fa-angle-double-right"></i><span class="hide-menu">Citas</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="<?php echo base_url(); ?>Asignacion/nuevo"><i class=" fas fa-book"></i> Crear</a></li>
           
                     </ul> 
                 </li>
-                <li>
-                    <a class="has-arrow " href="#" aria-expanded="false"><i class="fas fa-angle-double-left"></i><span class="hide-menu">Devolucion de activos</span></a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li><a href="<?php echo base_url(); ?>Devolucion/nuevo"><i class=" fas fa-book"></i>Devolucion</a></li>
-                        <li><a href="<?php echo base_url(); ?>Devolucion/lista"><i class="fas fa-clipboard-list"></i> Historial</a></li>
-                    </ul> 
-                </li>
-                <?php 
-                $rol=$this->session->userdata("rol");
-                if($rol==100): ?>
+           
 
 
                 <li>
-                    <a class="has-arrow " href="#" aria-expanded="false"><i class=" fas fa-donate"></i><span class="hide-menu"> Depreciacion de activos</span></a>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class=" fas fa-donate"></i><span class="hide-menu">Historial Clinico</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="<?php echo base_url(); ?>Depreciaciones/nuevo"><i class=" fas fa-book"></i> Estado de Activos</a></li>
+                        <li><a href="<?php echo base_url(); ?>Depreciaciones/nuevo"><i class=" fas fa-book"></i>Registro de consulta</a></li>
                   
                     </ul> 
                 </li>
+              
+            
                 <?php endif ?>
-                <li>
-                    <a class="has-arrow " href="#" aria-expanded="false"><i class="fas fa-building"></i><span class="hide-menu">Empresa</span></a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li><a href="<?php echo base_url(); ?>Empresa"><i class=" fas fa-book"></i> Datos Empresa</a></li>                 
-                        <li><a href="<?php echo base_url(); ?>Unidad/nuevo"><i class="fas fa-pencil-alt"></i> Unidad</a></li>                                                        
-                        <li><a href="<?php echo base_url(); ?>Cargos/nuevo"><i class="fas fa-pencil-alt"></i> Cargos</a></li>                 
-                        <li><a href="<?php echo base_url(); ?>Personas/nuevo"><i class=" fas fa-user"></i> Empleados</a></li>
-                        <li><a href="<?php echo base_url(); ?>bienvenido"><i class=" fas fa-info"></i> Acerca de</a></li> 
-                    </ul> 
-                </li>
-                <?php endif ?>
-                <?php 
-                $rol=$this->session->userdata("rol");
-                if($rol==1): ?>                    
-                 <li>
-                    <a class="has-arrow " href="#" aria-expanded="false"><i class="fas fa-angle-double-right"></i><span class="hide-menu">Activos asignados</span></a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li><a href="<?php echo base_url(); ?>Asignacion/lista_user"><i class=" fas fa-book"></i> Listado</a></li>
-                     
-                    </ul> 
-                </li>
-                <?php endif ?>
+          
 
 
 

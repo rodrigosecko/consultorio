@@ -20,7 +20,7 @@
                         <div class="card card-inverse card-info">
                             <div class="box bg-info text-center">
                                 <a href="<?php echo base_url(); ?>personas/nuevo" target="blank">
-                                <h1 class="font-light text-white"><?php echo $conteo_pers->total ?></h1>
+                                <h1 class="font-light text-white"><?php echo $conteo_pers ?></h1>
                                 <h1 class="text-white"><i class="ti-user"></i></h1>
                                 <h6 class="text-white">Empleados</h6>
                             </a>
@@ -32,9 +32,9 @@
                         <div class="card card-primary card-inverse">
                             <div class="box text-center">
                                 <a href="<?php echo base_url(); ?>activos/nuevo" target="blank">
-                                <h1 class="font-light text-white"><?php echo $conteo_act->total ?></h1>
+                                <h1 class="font-light text-white"><?php echo $conteo_act ?></h1>
                                 <h1 class="text-white"><i class="ti-home"></i></h1>
-                                <h6 class="text-white">Total Activos</h6>
+                                <h6 class="text-white">Total consultas</h6>
                                 </a>
                             </div>
                         </div>
@@ -44,65 +44,16 @@
                         <div class="card card-inverse card-success">
                             <div class="box text-center">
                                 <a href="<?php echo base_url(); ?>Asignacion/nuevo" target="blank">
-                                <h1 class="font-light text-white"><?php echo $conteo_asign->total ?></h1>
+                                <h1 class="font-light text-white"><?php echo $conteo_asign ?></h1>
                                 <h1 class="text-white"><i class="ti-share"></i></h1>
-                                <h6 class="text-white">Asignaciones</h6>
+                                <h6 class="text-white">citas</h6>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <!-- Column -->
-                    <div class="col-md-6 col-lg-3 col-xlg-3">
-                        <div class="card card-inverse card-warning">
-                            <div class="box text-center">
-                                <a href="<?php echo base_url(); ?>dashboard/listado" target="blank">
-                                <h1 class="font-light text-white"><?php echo $conteo_dep->total ?></h1>
-                                <h1 class="text-white"><i class="ti-trash"></i></h1>
-
-                                <h6 class="text-white">Vida util en 30 dias</h6></a>
-                            </div>
-                        </div>
-                    </div>
+              
                 </div>
 
-        <div class="row">
-
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Compra de activos</h4>
-                        <div>
-                            <canvas id="chart1" height="150"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- column -->
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Detalle de Activos</h4>
-                        <div>
-                            <canvas id="chart3" height="150"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- column -->
-            <!-- column -->
-
-
-            <!-- column -->
-            <!-- column -->
-
-            <!-- column -->
-            <!-- column -->
-
-            <!-- column -->
-            <!-- column -->
-
-            <!-- column -->
-        </div>
 
 
     </div>

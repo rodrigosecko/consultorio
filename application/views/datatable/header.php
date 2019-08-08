@@ -13,7 +13,7 @@
     <link href="<?php echo base_url(); ?>public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/assets/plugins/datatables/media/css/dataTables.bootstrap4.css">
 
-    <title>ACTIVOS FIJOS</title>    
+    <title>DentalSoft</title>    
     <!-- Custom CSS -->
     <link href="<?php echo base_url(); ?>public/css/style.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
@@ -59,7 +59,7 @@
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
-                           <img src="<?php echo base_url(); ?>public/assets/images/logos/icono_emp.png" alt="homepage" class="dark-logo" />
+                                <img src="<?php echo base_url(); ?>public/assets/images/logos/icon_dent.png" alt="homepage" class="dark-logo" width="25%" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
@@ -67,7 +67,7 @@
                          <!-- dark Logo text 
                          <img src="<?php echo base_url(); ?>public/assets/images/logo-text.png" alt="homepage" class="dark-logo" />-->
                          <!-- Light Logo text -->    
-                         <img src="<?php echo base_url(); ?>public/assets/images/logos/activostext.png" class="dark-logo" alt="homepage" /></span>
+                         <img src="<?php echo base_url(); ?>public/assets/images/logos/dental_logo.png" class="dark-logo" alt="homepage" width="70%"/></span>
                           </a>
 
 

@@ -40,10 +40,10 @@
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <section id="wrapper">
-        <div class="login-register" style="background-image: url(public/assets/images/background/loginalt.jpg);">        
+        <div class="login-register" style="background-image: url(public/assets/images/background/clinica_dental.jpg);">        
             <div class="login-box card">
                 <div class="col-xs-12" align="center">
-                            <img src="<?php echo base_url().'public/assets/images/logos/activos_fijos.png' ;?>" >
+                            <img src="<?php echo base_url().'public/assets/images/logos/dental_logo.png' ;?>"  width="100%">
                         </div>
 
                          
@@ -74,7 +74,7 @@
                     </div>
 
                     <div class="col-xs-12" align="center">
-                            <img src="<?php echo base_url().'public/assets/images/logos/footer.png' ;?>" >
+                            <img src="<?php echo base_url().'public/assets/images/logos/dental_logo_footer.png' ;?>" width="70%">
                         </div>
                     
                 </form>

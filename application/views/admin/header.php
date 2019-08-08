@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>public/assets/images/favicon.png">
-    <title>ACTIVOS FIJOS</title>
+    <title>DentalSoft</title>
     <link href="<?php echo base_url(); ?>public/assets/plugins/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>public/assets/plugins/dropify/dist/css/dropify.min.css">
     <!-- Bootstrap Core CSS -->
@@ -60,7 +60,7 @@
                         <!--End Logo icon -->
                         
                         <!-- Logo text -->
-                          <img src="<?php echo base_url(); ?>public/assets/images/logos/icono_emp.png" alt="homepage" class="dark-logo" />
+                               <img src="<?php echo base_url(); ?>public/assets/images/logos/icon_dent.png" alt="homepage" class="dark-logo" width="60%" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
@@ -68,7 +68,7 @@
                          <!-- dark Logo text 
                          <img src="<?php echo base_url(); ?>public/assets/images/logo-text.png" alt="homepage" class="dark-logo" />-->
                          <!-- Light Logo text -->    
-                         <img src="<?php echo base_url(); ?>public/assets/images/logos/activostext.png" class="dark-logo" alt="homepage" /></span>
+                         <img src="<?php echo base_url(); ?>public/assets/images/logos/dental_logo.png" class="dark-logo" alt="homepage" width="70%"/></span>
                     </a>
 
 
