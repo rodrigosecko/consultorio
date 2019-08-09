@@ -44,7 +44,7 @@
                 <li>
                     <a class="has-arrow " href="#" aria-expanded="false"><i class="fas fa-angle-double-left"></i><span class="hide-menu">Doctores</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="<?php echo base_url(); ?>Devolucion/nuevo"><i class=" fas fa-book"></i>Registro</a></li>
+                        <li><a href="<?php echo base_url(); ?>doctor/nuevo"><i class=" fas fa-book"></i>Registro</a></li>
                         
                     </ul> 
                 </li>
@@ -62,7 +62,7 @@
                 <li>
                     <a class="has-arrow " href="#" aria-expanded="false"><i class=" fas fa-donate"></i><span class="hide-menu">Historial Clinico</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="<?php echo base_url(); ?>Depreciaciones/nuevo"><i class=" fas fa-book"></i>Registro de consulta</a></li>
+                        <li><a href="<?php echo base_url(); ?>Historial/nuevo"><i class=" fas fa-book"></i>Registro de consulta</a></li>
                   
                     </ul> 
                 </li>
