@@ -40,17 +40,7 @@
                         </div>
                     </div>
                     <!-- Column -->
-                    <div class="col-md-6 col-lg-3 col-xlg-3">
-                        <div class="card card-inverse card-success">
-                            <div class="box text-center">
-                                <a href="<?php echo base_url(); ?>Asignacion/nuevo" target="blank">
-                                <h1 class="font-light text-white"><?php echo $conteo_asign ?></h1>
-                                <h1 class="text-white"><i class="ti-share"></i></h1>
-                                <h6 class="text-white">citas</h6>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                
               
                 </div>
 
