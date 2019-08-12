@@ -3,15 +3,15 @@
 
  Source Server         : mysql
  Source Server Type    : MySQL
- Source Server Version : 100137
+ Source Server Version : 100133
  Source Host           : localhost:3306
  Source Schema         : consultorio
 
  Target Server Type    : MySQL
- Target Server Version : 100137
+ Target Server Version : 100133
  File Encoding         : 65001
 
- Date: 10/08/2019 13:18:26
+ Date: 11/08/2019 22:02:08
 */
 
 SET NAMES utf8mb4;
@@ -83,7 +83,7 @@ CREATE TABLE `doctor`  (
 -- ----------------------------
 INSERT INTO `doctor` VALUES (1, 'admin', 'admin', 'admin', 12345, 2, 12345687, 'asd', 1);
 INSERT INTO `doctor` VALUES (2, 'rodrigos', 'xds', 'xds', 123131310, 1, 684247660, 'Av. McaI. Santa Cruz - Edif. La Primera - P.8 Bloque A', 1);
-INSERT INTO `doctor` VALUES (11, 'df', 'df', 'df', 12313131, 2, 68424766, 'Av. McaI. Santa Cruz - Edif. La Primera - P.8 Bloque A', 0);
+INSERT INTO `doctor` VALUES (11, 'Gabriela', 'paz', 'estensoro', 12313131, 2, 68424766, 'Av. McaI. Santa Cruz - Edif. La Primera - P.8 Bloque A', 1);
 
 -- ----------------------------
 -- Table structure for especialidad
@@ -116,15 +116,22 @@ CREATE TABLE `historial`  (
   `id_doctor` int(11) NOT NULL,
   `id_paciente` int(11) NOT NULL,
   `costo` int(11) NOT NULL,
-  `fecha` int(11) NOT NULL,
-  `diagnostico` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `tratamiento` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `fecha` date NOT NULL,
+  `diagnostico` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `tratamiento` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `activo` int(255) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id_historial`) USING BTREE,
   INDEX `id_doctor`(`id_doctor`) USING BTREE,
   INDEX `id_paciente`(`id_paciente`) USING BTREE,
   CONSTRAINT `historial_ibfk_1` FOREIGN KEY (`id_doctor`) REFERENCES `doctor` (`id_doctor`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `historial_ibfk_2` FOREIGN KEY (`id_paciente`) REFERENCES `paciente` (`id_paciente`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of historial
+-- ----------------------------
+INSERT INTO `historial` VALUES (1, 11, 1, 5000, '2019-08-11', 'caries dental', 'tratamiento de conducto', 1);
+INSERT INTO `historial` VALUES (2, 1, 2, 19000, '2019-08-02', 'xds', 'xds', 1);
 
 -- ----------------------------
 -- Table structure for paciente
@@ -147,6 +154,6 @@ CREATE TABLE `paciente`  (
 -- Records of paciente
 -- ----------------------------
 INSERT INTO `paciente` VALUES (1, 'rodrigo', 'secko', 'flores', 6751497, 123456, 'av baltazar', '2019-08-08', 1);
-INSERT INTO `paciente` VALUES (2, 'xd', 'xd', 'xd', 12313131, 68424766, 'Av. McaI. S', '0000-00-00', 0);
+INSERT INTO `paciente` VALUES (2, 'xd', 'xd', 'xd', 12313131, 68424766, 'Av. McaI. S', '0000-00-00', 1);
 
 SET FOREIGN_KEY_CHECKS = 1;

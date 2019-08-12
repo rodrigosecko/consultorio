@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Reporte de Alta de Activos</title>
+    <title>Reporte de Activos</title>
 
     <style type="text/css">
         @page {
@@ -29,6 +29,15 @@
         tfoot tr td {
             font-weight: bold;
             font-size: x-small;
+        }
+
+        .code {
+            font-size: 8px;
+        }
+
+        tr.border_bottom td {
+          border-bottom:1pt solid black;
+         
         }
 
         .invoice table {
@@ -64,25 +73,25 @@
             <td align="left" style="width: 25%;">
                 <h3></h3>
                 <pre>
-Av. Mcal. Santa Cruz - Edif. La Primera
+Av. Mcal. Santa Cruz
 P.8 Bloque A Of.1
 La Paz - Bolvia
                     <br /><br />
-Fecha: La Paz <?php echo $fecha; ?>  de mayo de 2019                  
+Fecha: La Paz <?php echo $dia; ?>  de <?php echo $mes; ?> de 2019                  
                 </pre>
 
 
             </td>
             <td align="center">
                
-               <img src="d:/logo.png" alt="Logo" width="96" class="logo"/>
+               <img src="<?php echo base_url(); ?>public/assets/images/reporte/dental_logo.png" alt="Logo" width="200" class="logo"/>
             </td>
             <td align="right" style="width: 40%;">
 
-                <h3>Constructora Consorcio Ryuno Noeval</h3>
+                <h3>Consultorio Dental</h3>
                 <pre>
                     Tel/fax.: (591-2) 2900442
-                    Email.: ryuno-noevaI@hotmail.com
+                    Email.: dentalSoft@hotmail.com
                 </pre>
             </td>
         </tr>
@@ -97,146 +106,106 @@ Fecha: La Paz <?php echo $fecha; ?>  de mayo de 2019
 
 
 <div class="invoice">
-    <h3 align="center">DOCUMENTO DE ALTA DE ACTIVO FIJO</h3>
-        <div id="barcode" align="right"></div>
-        <table width="100%" >      
-           <tbody>           
-                <tr align="right" style="width: 50%;">
-                    <td align="center"><img src="d:/barcode.png" alt="Logo" width="128" class="logo"/><p></p>
-                        <?php echo $code->codigo; ?></td>                        
-                </tr>              
-        </tbody>
-        
-    </table>
+    <h3 align="center">Registro de consulta</h3>
+         
+   
+    <p>
+
+
+    
+    <br><br>
      <table width="100%">
         <tr>
-            <td align="left" style="width: 10%;">                
+            <td align="left" style="width: 5%;">                
                 <pre><b>
-                    Oficina:   
-                    Responsable:                 
-                    Rubro contable:
-                    Tipo de bien:
-                    Estado del bien:</b>
+                    Doctor:
+                    Especialidad:
+                    Paciente:   
+                    Carnet de Identidad: 
+                    Costo:                                     
+                    
                     <br />                                  
                 </pre>
             </td>
-            <td align="left" style="width: 100%;">                
+            <td align="left" style="width: 5%;">                
                 <pre>
-                    Almacen
-                    Mario Yupanqui Soliz
-                    Muebles y enseres de oficina
-                    Escritorio                    
-                    Nuevo
-                    <br /><br />                                    
+                    <?php echo $data->doctor ?><p></p>
+                    <?php echo $data_dr->descripcion ?><p></p>
+                    <?php echo $data->paciente ?><p></p>
+                    <?php echo $data->ci ?><p></p>
+                    <?php echo $data->costo.' Bs.' ?>
+                 <br /> 
+                                                   
                 </pre>
             </td>
         </tr>
+
+          <tr>
+            <td align="left" style="width: 5%;">                
+                <pre>
+                      <b>Diagnostico:</b><br>
+                      <p align="center">
+                          <?php echo $data->diagnostico ?> 
+                      </p>
+                                                           
+                    
+                                                    
+                </pre>
+            </td>
+           
+        </tr>
+
+
+          <tr>
+            <td align="left" style="width: 5%;">                
+                <pre>
+                      <b>Tratamiento:</b><br>
+                      <p align="center">
+                     <?php echo $data->tratamiento ?>    </p>                                    
+                    
+                                                    
+                </pre>
+            </td>
+           
+        </tr>
     </table>
 
+      
 
-
-<table width="100%">
-        <tr>
-            <td align="justify" style="width: 100%;">
-           En la ciudad de La Paz en fecha se procede a la asignacion del bien de acuerdo al siguiente detalle:                  
-        </td>
-       
-    </tr>
-</table>
-
-    <table width="100%" >
-        <thead>
-            <tr>
-               
-                <th>Codigo</th> 
-                <th>Incorporacion</th> 
-                <th>Descripcion</th>
-                <th>Costo</th>
-                <th>Estado</th>
-                <th>Vida Util (mes )</th>
-            </tr>
-        </thead>
-        <tbody>            
-            <?php foreach ($data_table_activos as $row) { ?>
-                <tr>                    
-                    <td><?php echo $row->codigo; ?></td>
-                    <td><?php echo $row->fecha_incorporacion; ?></td>                                                      
-                    <td><?php echo $row->descripcion; ?></td> 
-                    <td><?php echo $row->costo; ?></td> 
-                    <td><?php echo $row->est; ?></td>    
-                    <td><?php echo $row->dep_mensual; ?></td>     
-                </tr>
-                <?php 
-            } ?>
-        </tbody>
-    </table>
-    <p>
-
-    </p><p></p>
-
-    
-    <br><br><br><br><br><br>
-    <table width="100%">        
+     <table width="100%">        
         <tbody>
         <tr>
-            <td align="center" style="width: 50%;">
-                    .........................................................<p></p>      
-                    Mario Yupanqui Soliz<p></p>   
-                    Encargado de Almacen<p></p>      
-              
-              
-            </td>
-            <td align="center" style="width: 50%;">    
-                    .........................................................<p></p> 
-                    Stefania Cordero Maydana:  <p></p>      <p></p>      <p></p>
-                    Departamento de Contabilidad<p></p>      
-            
-            </td>           
-        </tr>
-        <tr>
-            <td>
-                
+            <td align="center" style="width: 100%;">
                 <br><br><br><br><br><br><br><br><br><br><br><br>
-            </td>
-        </tr>
-        <tr>
-           <td align="center" style="width: 50%;">
                     .........................................................<p></p>      
-                    Efraín Soliz Mendoza<p></p>      
-                    Auxiliar Contable<p></p>   
+                    <?php echo $data_dr->doctor ?>    </p>   <p></p>   
+                    <?php echo $data_dr->descripcion ?>    </p>   <p></p>      
+              
+              
             </td>
-            <td align="center" style="width: 50%;">    
                      
-            
-            </td>          
         </tr>
+      
+     
         <tr>
             <td></td>
             <td></td>         
         </tr>
         </tbody>     
     </table>
+    
 
-    <table width="100%">
-        <tr>            
-            <td align="right" style="width: 100%;">
-               
-               <img src="d:/qr.png" alt="Logo" width="96" class="logo"/>
-            </td>
-            
-        </tr>
 
-    </table>
 </div>
 
 <div class="information" style="position: absolute; bottom: 0;">
     <table width="100%">
         <tr>
             <td align="left" style="width: 50%;">
-                &copy; Ryuno Noeval-2019 Todos los derechos reservados.
+                &copy; DentalSoft-2019 Todos los derechos reservados.
             </td>
             <td align="right" style="width: 50%;">
-                Company Slogan
+                
             </td>
         </tr>
 

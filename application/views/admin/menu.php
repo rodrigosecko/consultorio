@@ -49,13 +49,7 @@
                     </ul> 
                 </li>
 
-                   <li>
-                    <a class="has-arrow " href="#" aria-expanded="false"><i class="fas fa-angle-double-right"></i><span class="hide-menu">Citas</span></a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li><a href="<?php echo base_url(); ?>Asignacion/nuevo"><i class=" fas fa-book"></i> Crear</a></li>
-          
-                    </ul> 
-                </li>
+               
            
 
 
