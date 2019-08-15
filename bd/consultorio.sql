@@ -11,7 +11,7 @@
  Target Server Version : 100133
  File Encoding         : 65001
 
- Date: 11/08/2019 22:02:08
+ Date: 15/08/2019 00:08:53
 */
 
 SET NAMES utf8mb4;
@@ -25,13 +25,20 @@ CREATE TABLE `cita`  (
   `id_cita` int(11) NOT NULL AUTO_INCREMENT,
   `id_doctor` int(11) NOT NULL,
   `id_paciente` int(11) NOT NULL,
-  `fecha` datetime(0) NOT NULL,
+  `fecha` date NOT NULL,
+  `descripcion` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `activo` int(2) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id_cita`) USING BTREE,
   INDEX `id_doctor`(`id_doctor`) USING BTREE,
   INDEX `id_paciente`(`id_paciente`) USING BTREE,
   CONSTRAINT `cita_ibfk_1` FOREIGN KEY (`id_doctor`) REFERENCES `doctor` (`id_doctor`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `cita_ibfk_2` FOREIGN KEY (`id_paciente`) REFERENCES `paciente` (`id_paciente`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of cita
+-- ----------------------------
+INSERT INTO `cita` VALUES (1, 2, 2, '2019-08-02', 'asds', 1);
 
 -- ----------------------------
 -- Table structure for credencial

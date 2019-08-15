@@ -60,6 +60,13 @@
                   
                     </ul> 
                 </li>
+                 <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="fas fa-angle-double-left"></i><span class="hide-menu">Citas</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="<?php echo base_url(); ?>citas"><i class=" fas fa-book"></i>Registro</a></li>
+                        
+                    </ul> 
+                </li>
               
             
                 <?php endif ?>
