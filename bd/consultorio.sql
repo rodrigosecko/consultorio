@@ -11,7 +11,7 @@
  Target Server Version : 100133
  File Encoding         : 65001
 
- Date: 15/08/2019 00:08:53
+ Date: 16/08/2019 00:01:34
 */
 
 SET NAMES utf8mb4;
@@ -127,18 +127,21 @@ CREATE TABLE `historial`  (
   `diagnostico` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `tratamiento` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `activo` int(255) NOT NULL DEFAULT 1,
+  `acuenta` int(11) NOT NULL,
+  `saldo` int(11) NOT NULL,
   PRIMARY KEY (`id_historial`) USING BTREE,
   INDEX `id_doctor`(`id_doctor`) USING BTREE,
   INDEX `id_paciente`(`id_paciente`) USING BTREE,
   CONSTRAINT `historial_ibfk_1` FOREIGN KEY (`id_doctor`) REFERENCES `doctor` (`id_doctor`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `historial_ibfk_2` FOREIGN KEY (`id_paciente`) REFERENCES `paciente` (`id_paciente`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of historial
 -- ----------------------------
-INSERT INTO `historial` VALUES (1, 11, 1, 5000, '2019-08-11', 'caries dental', 'tratamiento de conducto', 1);
-INSERT INTO `historial` VALUES (2, 1, 2, 19000, '2019-08-02', 'xds', 'xds', 1);
+INSERT INTO `historial` VALUES (1, 11, 1, 5000, '2019-08-11', 'caries dental', 'tratamiento de conducto', 1, 300, 4700);
+INSERT INTO `historial` VALUES (2, 1, 2, 1900, '2019-08-02', 'asd', 'asd', 1, 300, 1600);
+INSERT INTO `historial` VALUES (3, 11, 1, 5000, '2019-08-15', 'qwerty', 'qwerty', 1, 400, 4600);
 
 -- ----------------------------
 -- Table structure for paciente

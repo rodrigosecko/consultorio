@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Reporte de Activos</title>
+    <title>Reporte </title>
 
     <style type="text/css">
         @page {
@@ -23,7 +23,7 @@
         }
 
         table {
-            font-size: x-small;
+            font-size: 14px;
         }
 
         tfoot tr td {
@@ -122,8 +122,9 @@ Fecha: La Paz <?php echo $dia; ?>  de <?php echo $mes; ?> de 2019
                     Especialidad:
                     Paciente:   
                     Carnet de Identidad: 
-                    Costo:                                     
-                    
+                    Costo Total:                                     
+                    A cuenta: 
+                    Saldo: 
                     <br />                                  
                 </pre>
             </td>
@@ -133,7 +134,9 @@ Fecha: La Paz <?php echo $dia; ?>  de <?php echo $mes; ?> de 2019
                     <?php echo $data_dr->descripcion ?><p></p>
                     <?php echo $data->paciente ?><p></p>
                     <?php echo $data->ci ?><p></p>
-                    <?php echo $data->costo.' Bs.' ?>
+                    <?php echo $data->costo.' Bs.' ?><p></p>
+                    <?php echo $data->acuenta.' Bs.' ?><p></p>
+                    <?php echo $data->saldo.' Bs.' ?>
                  <br /> 
                                                    
                 </pre>
@@ -176,7 +179,7 @@ Fecha: La Paz <?php echo $dia; ?>  de <?php echo $mes; ?> de 2019
         <tbody>
         <tr>
             <td align="center" style="width: 100%;">
-                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br>
                     .........................................................<p></p>      
                     <?php echo $data_dr->doctor ?>    </p>   <p></p>   
                     <?php echo $data_dr->descripcion ?>    </p>   <p></p>      

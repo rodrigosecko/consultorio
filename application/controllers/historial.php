@@ -51,7 +51,9 @@ class Historial extends CI_Controller
             'costo' => $this->input->post('costo'), //input 
             'fecha' => $this->input->post('fecha'), //input 
             'diagnostico' => $this->input->post('diagnostico'), //input    
-            'tratamiento' => $this->input->post('tratamiento'), //input                   
+            'tratamiento' => $this->input->post('tratamiento'), //input     
+            'acuenta' => $this->input->post('acuenta'), //input                 
+            'saldo' => $this->input->post('saldo'), //input   
         );     
         $this->db->insert('historial', $data);
 
@@ -74,6 +76,8 @@ class Historial extends CI_Controller
             'fecha' => $this->input->post('fecha_e'), //input 
             'diagnostico' => $this->input->post('diagnostico_e'), //input    
             'tratamiento' => $this->input->post('tratamiento_e'), //input   
+              'acuenta' => $this->input->post('acuenta_e'), //input  
+                'saldo' => $this->input->post('saldo_e'), //input  
           
           
             );
@@ -150,7 +154,7 @@ WHERE h.activo=1 and id_historial=$id")->row();
         $data['anio']=date('Y'); 
 
 
-        $this->load->view('reportes/cert_alta_pdf',$data);
+        $this->load->view('reportes/recibo',$data);
         $html = $this->output->get_output();
         $this->load->library('pdf');
         $this->dompdf->loadHtml($html);

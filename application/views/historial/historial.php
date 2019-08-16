@@ -21,7 +21,7 @@
                     <div class="card-body">
                         <div class="row page-titles">
                             <div class="col-md-6 col-8 align-self-center">
-                                <h4 class="card-title">Registro de Consultar</h4>                                
+                                <h4 class="card-title">Registro de Consultas</h4>                                
                             </div>                           
                         </div>                       
                         <p></p>                       
@@ -45,7 +45,9 @@
                                                 <th>Doctor</th> 
                                                 <th>Paciente</th> 
                                                 <th>fecha</th> 
-                                                <th>costo</th>                                        
+                                                <th>costo Total</th>   
+                                                <th>A cuenta</th>  
+                                                <th>Saldo</th>                                       
                                                 <th>Diagnostico</th>
                                                 <th>Tratamiento</th>                                               
                                                 <th>Acciones</th>
@@ -61,14 +63,18 @@
                                                 $row->fecha."||".
                                                $row->costo."||".                                              
                                                $row->diagnostico."||".
-                                               $row->tratamiento;
+                                               $row->tratamiento."||".
+                                                $row->acuenta."||".
+                                                 $row->saldo;
                                                 ?>
                                                 <tr>
                                                     <td><?php echo $i++; ?></td>                                                   
                                                     <td><?php echo $row->doctor; ?></td>                                              
                                                     <td><?php echo $row->paciente; ?></td> 
                                                      <td><?php echo $row->fecha; ?></td> 
-                                                    <td><?php echo $row->costo; ?></td>                
+                                                    <td><?php echo $row->costo; ?></td>  
+                                                    <td><?php echo $row->acuenta; ?></td> 
+                                                    <td><?php echo $row->saldo; ?></td>               
                                                     <td><?php echo $row->diagnostico; ?></td> 
                                                     <td><?php echo $row->tratamiento; ?></td> 
                                                          
@@ -147,11 +153,28 @@
                                 <div class="row">                                   
                                     <div class="col-md-2">
                                          <div class="form-group">
-                                                   <label for="recipient-name" class="control-label">Costo: BS. </label>
+                                                   <label for="recipient-name" class="control-label">Total: BS. </label>
                                                     <input type="number" class="form-control" id="costo" name="costo" required="">
                                       
                                         </div>
                                     </div>
+                                     <div class="col-md-2">
+                                         <div class="form-group">
+                                                   <label for="recipient-name" class="control-label">A cuenta: BS. </label>
+                                                    <input type="number" class="form-control" id="acuenta" name="acuenta" required="">
+                                      
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                         <div class="form-group">
+                                                   <label for="recipient-name" class="control-label">Saldo: BS. </label>
+                                                    <input type="number" class="form-control" id="saldo" name="saldo" required="">
+                                      
+                                        </div>
+                                    </div>
+                                   
+                                    </div>
+                                    <div class="row"> 
                                      <div class="col-md-4">
                                          <div class="form-group">
                                                    <label for="recipient-name" class="control-label">Diagnostico:</label>
@@ -240,6 +263,22 @@
                                       
                                         </div>
                                     </div>
+                                    <div class="col-md-2">
+                                         <div class="form-group">
+                                                   <label for="recipient-name" class="control-label">A cuenta: BS. </label>
+                                                    <input type="number" class="form-control" id="acuenta_e" name="acuenta_e" required="">
+                                      
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                         <div class="form-group">
+                                                   <label for="recipient-name" class="control-label">Saldo: BS. </label>
+                                                    <input type="number" class="form-control" id="saldo_e" name="saldo_e" required="">
+                                      
+                                        </div>
+                                    </div>
+                                     </div>    
+                                <div class="row"> 
                                      <div class="col-md-4">
                                          <div class="form-group">
                                                    <label for="recipient-name" class="control-label">Diagnostico:</label>
@@ -290,6 +329,8 @@
       
        $('#diagnostico_e').val(d[5]);
        $('#tratamiento_e').val(d[6]);
+       $('#acuenta_e').val(d[7]);
+       $('#saldo_e').val(d[8]);
     
 
    }
