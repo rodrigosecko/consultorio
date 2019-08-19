@@ -76,8 +76,11 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',	
+	'username' => 'root',
+	/*
 	'password' => 'Axs51C0FAdm1n',
+	*/	
+	'password' => '',
 	'database' => 'Consultorio',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

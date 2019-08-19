@@ -35,6 +35,10 @@
             font-size: 8px;
         }
 
+         .code_dos {
+            font-size: 12px;
+        }
+
         tr.border_bottom td {
           border-bottom:1pt solid black;
          
@@ -106,37 +110,22 @@ Fecha: La Paz <?php echo $dia; ?>  de <?php echo $mes; ?> de 2019
 
 
 <div class="invoice">
-    <h3 align="center">Registro de consulta</h3>
-         
-   
-    <p>
-
-
-    
+    <h3 align="center">Registro de consultas</h3>           
+    <p align="center"> <?php echo $fecha_ini ?>
     <br><br>
      <table width="100%">
         <tr>
             <td align="left" style="width: 5%;">                
                 <pre><b>
                     Doctor:
-                    Especialidad:
-                    Paciente:   
-                    Carnet de Identidad: 
-                    Costo Total:                                     
-                    A cuenta: 
-                    Saldo: 
+                    Especialidad:                    
                     <br />                                  
                 </pre>
             </td>
             <td align="left" style="width: 5%;">                
                 <pre>
-                    <?php echo $data->doctor ?><p></p>
-                    <?php echo $data_dr->descripcion ?><p></p>
-                    <?php echo $data->paciente ?><p></p>
-                    <?php echo $data->ci ?><p></p>
-                    <?php echo $data->costo.' Bs.' ?><p></p>
-                    <?php echo $data->acuenta.' Bs.' ?><p></p>
-                    <?php echo $data->saldo.' Bs.' ?>
+                    <?php echo $data_dr->doctor ?><p></p>
+                    <?php echo $data_dr->descripcion ?>                  
                  <br /> 
                                                    
                 </pre>
@@ -144,34 +133,35 @@ Fecha: La Paz <?php echo $dia; ?>  de <?php echo $mes; ?> de 2019
             
         </tr>
 
-          <tr>
-            <td align="left" style="width: 5%;">                
-                <pre>
-                      <b>Diagnostico:</b><br>
-                      <p align="center">
-                          <?php echo $data->diagnostico ?> 
-                      </p>
-                                                           
-                    
-                                                    
-                </pre>
-            </td>
-           
-        </tr>
+         
+    </table>
 
-
-          <tr>
-            <td align="left" style="width: 5%;">                
-                <pre>
-                      <b>Tratamiento:</b><br>
-                      <p align="center">
-                     <?php echo $data->tratamiento ?>    </p>                                    
-                    
-                                                    
-                </pre>
-            </td>
-           
-        </tr>
+     <table width="100%" class="code_dos">
+        <thead>
+            <tr>
+               
+                <th>doctor</th> 
+                <th>paciente</th> 
+                <th>fecha</th>
+                <th>diagnostico</th>
+                <th>tratamiento</th>
+                <th>costo</th>
+                
+            </tr>
+        </thead>
+        <tbody>            
+            <?php foreach ($data as $row) { ?>
+                <tr>                    
+                    <td><?php echo $row->doctor; ?></td>
+                    <td><?php echo $row->paciente; ?></td>    
+                    <td><?php echo $row->fecha; ?></td> 
+                    <td><?php echo $row->diagnostico; ?></td>
+                    <td><?php echo $row->tratamiento; ?></td> 
+                    <td><?php echo $row->costo; ?></td>
+                </tr>
+                <?php 
+            } ?>
+        </tbody>
     </table>
 
       

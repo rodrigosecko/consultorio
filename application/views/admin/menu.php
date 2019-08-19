@@ -59,6 +59,10 @@
                         <li><a href="<?php echo base_url(); ?>Historial/nuevo"><i class=" fas fa-book"></i>Registro de consulta</a></li>
                   
                     </ul> 
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="<?php echo base_url(); ?>Historial/semana"><i class=" fas fa-book"></i>Reporte semanal</a></li>
+                  
+                    </ul>
                 </li>
                  <li>
                     <a class="has-arrow " href="#" aria-expanded="false"><i class="fas fa-angle-double-left"></i><span class="hide-menu">Citas</span></a>
