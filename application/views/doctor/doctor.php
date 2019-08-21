@@ -132,7 +132,7 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                                    <label for="recipient-name" class="control-label">C.I.:</label>
-                                                    <input type="text" class="form-control" id="ci" name="ci" required="">
+                                                    <input type="number" class="form-control" id="ci" name="ci" required="">
                                       
                                         </div>
 
@@ -140,7 +140,7 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="recipient-name" class="control-label">Telefono:</label>
-                                            <input type="text" class="form-control" id="telefono" name="telefono" required="">
+                                            <input type="number" class="form-control" id="telefono" name="telefono" required="">
                                         </div>                                                
                                     </div>
                                     <div class="col-md-4">
